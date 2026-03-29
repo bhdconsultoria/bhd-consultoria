@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BHD Consultoria — Clareza para decidir. Método para crescer.</title>
+<meta name="description" content="Sua empresa fatura, mas o lucro some? A BHD Consultoria aplica o Método CORE para transformar seus números em decisões estratégicas. Diagnóstico gratuito."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#0A2240;
+  --navy-d:#061629;
+  --steel:#7A9BB5;
+  --steel-l:#B5CCDC;
+  --chalk:#F4F6F8;
+  --charco:#3A3A3A;
+  --silver:#D1D3D4;
+  --white:#FFFFFF;
+  --gold:#C9A84C;
+  --r:6px;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;font-size:1rem;line-height:1.7;color:var(--charco);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul,ol{list-style:none}
+button{cursor:pointer;font-family:inherit;border:none;background:none}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--chalk)}
+::-webkit-scrollbar-thumb{background:var(--navy);border-radius:2px}
+
+/* ── CONTAINER ── */
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+
+/* ── CURSOR SPOTLIGHT ── */
+#spotlight{pointer-events:none;position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(122,155,181,.06) 0%,transparent 70%);transform:translate(-50%,-50%);transition:left .08s linear,top .08s linear;z-index:0}
+
+/* ── HEADER ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:1.1rem 0;transition:background .3s,box-shadow .3s}
+.nav.scrolled{background:rgba(10,34,64,.97);box-shadow:0 2px 20px rgba(0,0,0,.25)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+/* SVG LOGO */
+.logo-svg{height:38px;width:auto}
+.nav-links{display:none;gap:2rem;align-items:center}
+.nav-links a{font-size:.82rem;font-weight:500;color:rgba(255,255,255,.75);letter-spacing:.04em;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{display:none;background:var(--steel);color:var(--white);font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.65rem 1.4rem;border-radius:var(--r);transition:background .2s,transform .15s}
+.nav-cta:hover{background:var(--steel-l);transform:translateY(-1px)}
+.nav-hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--white);border-radius:1px;transition:transform .3s,opacity .3s}
+.nav-hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{display:none;flex-direction:column;background:var(--navy-d);padding:1.5rem;gap:1.25rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:.95rem;color:rgba(255,255,255,.8);font-weight:500;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:.8rem}
+.mobile-menu a:last-child{border:none;padding:0}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:100vh;background:var(--navy-d);display:flex;align-items:center;overflow:hidden;padding:7rem 0 5rem}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237A9BB5' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-geo{position:absolute;right:-120px;top:50%;transform:translateY(-50%);width:600px;height:600px;border-radius:50%;border:1px solid rgba(122,155,181,.08);pointer-events:none}
+.hero-geo::before{content:'';position:absolute;inset:60px;border-radius:50%;border:1px solid rgba(122,155,181,.06)}
+.hero-geo::after{content:'';position:absolute;inset:140px;border-radius:50%;border:1px solid rgba(122,155,181,.04)}
+.hero-content{position:relative;z-index:1;max-width:720px}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);border:1px solid rgba(122,155,181,.3);padding:.45rem 1rem;border-radius:2rem;margin-bottom:2rem}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--steel);animation:pulse-dot 2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:var(--steel)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.65);max-width:540px;margin-bottom:2.5rem;line-height:1.75}
+.hero-cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-bottom:3rem}
+.btn-hero-primary{display:inline-flex;align-items:center;gap:.6rem;background:var(--steel);color:var(--white);font-size:.82rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:.9rem 2rem;border-radius:var(--r);transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 20px rgba(122,155,181,.3)}
+.btn-hero-primary:hover{background:#6d8fa8;transform:translateY(-2px);box-shadow:0 8px 28px rgba(122,155,181,.4)}
+.btn-hero-ghost{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.7);font-size:.82rem;font-weight:500;letter-spacing:.04em;padding:.9rem 0;transition:color .2s}
+.btn-hero-ghost:hover{color:var(--white)}
+.btn-hero-ghost svg{transition:transform .2s}
+.btn-hero-ghost:hover svg{transform:translateX(3px)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.hero-stat{padding:1.25rem 1.5rem;background:rgba(10,34,64,.6)}
+.hero-stat-num{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--white);line-height:1}
+.hero-stat-label{font-size:.75rem;color:rgba(255,255,255,.5);margin-top:.3rem;letter-spacing:.03em}
+/* animated counter */
+.counter-done{transition:none}
+
+/* ── TICKER ── */
+.ticker{background:var(--steel);padding:.6rem 0;overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;animation:ticker 28s linear infinite}
+.ticker-track:hover{animation-play-state:paused}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--white);padding:0 2.5rem;opacity:.9}
+.ticker-sep{color:rgba(255,255,255,.4);margin:0 -.5rem}
+
+/* ── SECTION BASE ── */
+.section{padding:6rem 0}
+.section-dark{background:var(--navy)}
+.section-chalk{background:var(--chalk)}
+.section-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);margin-bottom:.8rem}
+.section-h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.5rem);font-weight:700;line-height:1.2;color:var(--navy);margin-bottom:1rem}
+.section-h2-white{color:var(--white)}
+.section-lead{font-size:1.05rem;color:var(--charco);max-width:560px;line-height:1.75}
+.section-lead-white{color:rgba(255,255,255,.65)}
+
+/* ── PROBLEMA ── */
+.problema-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:start}
+.problema-list{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+.problema-item{display:flex;gap:1rem;padding:1.25rem;border-radius:var(--r);border:1px solid var(--silver);background:var(--white);transition:border-color .2s,transform .2s;cursor:default}
+.problema-item:hover{border-color:var(--steel);transform:translateX(4px)}
+.problema-icon{width:44px;height:44px;border-radius:var(--r);background:rgba(122,155,181,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.problema-icon svg{color:var(--steel)}
+.problema-item h3{font-size:.9rem;font-weight:600;color:var(--navy);margin-bottom:.2rem}
+.problema-item p{font-size:.85rem;color:var(--charco);opacity:.8;margin:0;line-height:1.55}
+.stat-block{background:var(--navy);border-radius:12px;padding:2.5rem;color:var(--white)}
+.stat-block-big{font-family:'Playfair Display',serif;font-size:4rem;font-weight:700;color:var(--steel);line-height:1}
+.stat-block-label{font-size:1rem;color:rgba(255,255,255,.8);margin-top:.5rem;font-weight:500}
+.stat-block-source{font-size:.72rem;color:rgba(255,255,255,.35);margin-top:1.5rem;letter-spacing:.04em}
+.stat-block-divider{width:40px;height:2px;background:var(--steel);margin:1.2rem 0}
+.stat-block-p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.6;margin:0}
+
+/* ── QUIZ INTERATIVO ── */
+.quiz-wrap{max-width:720px;margin:0 auto;text-align:center}
+.quiz-header{margin-bottom:2.5rem}
+.quiz-header p{color:rgba(255,255,255,.6);font-size:.95rem;margin-top:.6rem}
+.quiz-progress{display:flex;gap:.4rem;justify-content:center;margin-bottom:2rem}
+.qp-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);transition:background .3s,transform .3s}
+.qp-dot.done{background:var(--steel);transform:scale(1.2)}
+.qp-dot.active{background:var(--white);transform:scale(1.3)}
+.quiz-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:2.5rem;min-height:280px;display:flex;flex-direction:column;justify-content:space-between}
+.quiz-q{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--white);line-height:1.4;margin-bottom:1.5rem}
+.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.quiz-opt{padding:.85rem 1.25rem;border-radius:var(--r);border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:rgba(255,255,255,.75);font-size:.87rem;font-weight:500;cursor:pointer;transition:all .2s;text-align:left}
+.quiz-opt:hover{border-color:var(--steel);background:rgba(122,155,181,.1);color:var(--white)}
+.quiz-opt.selected{border-color:var(--steel);background:rgba(122,155,181,.18);color:var(--white)}
+.quiz-result{display:none;text-align:center;padding:1rem 0}
+.quiz-score-circle{width:100px;height:100px;border-radius:50%;border:3px solid var(--steel);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1.5rem}
+.quiz-score-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--white);line-height:1}
+.quiz-score-label{font-size:.65rem;color:var(--steel);letter-spacing:.06em;text-transform:uppercase}
+.quiz-result-msg{font-size:1rem;color:rgba(255,255,255,.8);line-height:1.65;margin-bottom:1.5rem;max-width:480px;margin-left:auto;margin-right:auto}
+.quiz-cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--steel);color:var(--white);font-size:.82rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:.9rem 2rem;border-radius:var(--r);transition:background .2s,transform .15s;border:none;cursor:pointer}
+.quiz-cta:hover{background:#6d8fa8;transform:translateY(-1px)}
+
+/* ── CORE METHOD ── */
+.core-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--silver);border-radius:12px;overflow:hidden}
+.core-card{background:var(--white);padding:2.25rem 2rem;display:grid;grid-template-columns:64px 1fr;gap:1.5rem;align-items:start;transition:background .2s}
+.core-card:hover{background:var(--chalk)}
+.core-letter-wrap{width:64px;height:64px;border-radius:var(--r);background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.core-letter{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--steel);line-height:1}
+.core-card h3{font-size:.95rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;letter-spacing:.01em}
+.core-card p{font-size:.87rem;color:var(--charco);opacity:.85;margin:0;line-height:1.6}
+.core-card-result{font-size:.78rem;font-weight:600;color:var(--steel);margin-top:.75rem;display:flex;align-items:center;gap:.35rem}
+.core-card-result::before{content:'→';font-size:.9rem}
+
+/* ── ROI CALCULATOR ── */
+.calc-wrap{background:var(--navy);border-radius:16px;padding:2.5rem;border:1px solid rgba(122,155,181,.15)}
+.calc-title{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--white);margin-bottom:.4rem}
+.calc-sub{font-size:.88rem;color:rgba(255,255,255,.5);margin-bottom:2rem}
+.calc-row{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.25rem}
+.calc-label{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.calc-slider{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:2px;background:rgba(255,255,255,.15);outline:none;cursor:pointer}
+.calc-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:18px;height:18px;border-radius:50%;background:var(--steel);cursor:pointer;border:2px solid var(--white);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.calc-slider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--steel);cursor:pointer;border:2px solid var(--white)}
+.calc-val{font-size:1.1rem;font-weight:600;color:var(--white);letter-spacing:-.01em}
+.calc-results{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;margin-top:.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.calc-result-item{background:rgba(255,255,255,.04);border-radius:var(--r);padding:1rem 1.1rem}
+.calc-result-label{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.35rem}
+.calc-result-val{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--steel);line-height:1}
+.calc-result-sub{font-size:.72rem;color:rgba(255,255,255,.35);margin-top:.25rem}
+.calc-roi-highlight{grid-column:1/-1;background:rgba(122,155,181,.12);border:1px solid rgba(122,155,181,.2);border-radius:var(--r);padding:1rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.calc-roi-label{font-size:.8rem;color:rgba(255,255,255,.6);font-weight:500}
+.calc-roi-val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--white);line-height:1}
+
+/* ── PROCESSO ACCORDION ── */
+.processo-list{display:flex;flex-direction:column;gap:.5rem}
+.processo-item{border:1px solid var(--silver);border-radius:var(--r);overflow:hidden;background:var(--white)}
+.processo-head{display:flex;align-items:center;gap:1.25rem;padding:1.25rem 1.5rem;cursor:pointer;transition:background .2s}
+.processo-head:hover{background:var(--chalk)}
+.processo-num{width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--white);font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.processo-head-text{flex:1}
+.processo-head-title{font-size:.95rem;font-weight:600;color:var(--navy)}
+.processo-head-sub{font-size:.78rem;color:var(--charco);opacity:.65;margin-top:.1rem}
+.processo-arrow{width:20px;height:20px;color:var(--steel);transition:transform .3s;flex-shrink:0}
+.processo-item.open .processo-arrow{transform:rotate(180deg)}
+.processo-item.open .processo-num{background:var(--steel)}
+.processo-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.processo-item.open .processo-body{max-height:200px}
+.processo-body-inner{padding:0 1.5rem 1.5rem 4.1rem;font-size:.88rem;color:var(--charco);line-height:1.7;border-top:1px solid var(--silver)}
+.processo-body-inner pt{padding-top:.8rem;display:block}
+
+/* ── DEPOIMENTOS ── */
+.depo-grid{display:grid;grid-template-columns:1fr;gap:1.5rem}
+.depo-card{background:var(--white);border:1px solid var(--silver);border-radius:12px;padding:2rem;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.depo-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--navy)}
+.depo-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(10,34,64,.08)}
+.depo-pain-tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);border:1px solid rgba(122,155,181,.3);padding:.3rem .75rem;border-radius:2rem;margin-bottom:.9rem}
+.depo-pain-tag span{width:5px;height:5px;border-radius:50%;background:var(--steel);display:inline-block}
+.depo-dor{font-size:.78rem;font-weight:600;color:var(--charco);opacity:.6;font-style:normal;margin-bottom:.6rem;padding-left:.1rem}
+.depo-stars{display:flex;gap:.2rem;margin-bottom:.75rem}
+.depo-star{color:var(--gold);font-size:1rem}
+.depo-text{font-size:.9rem;line-height:1.75;color:var(--charco);margin-bottom:1rem;font-style:italic}
+.depo-result{font-size:.78rem;font-weight:600;color:var(--navy);padding:.55rem .85rem;background:rgba(10,34,64,.05);border-radius:var(--r);margin-bottom:1.25rem;display:flex;align-items:flex-start;gap:.4rem;line-height:1.45}
+.depo-result::before{content:'→';color:var(--steel);flex-shrink:0;font-style:normal}
+.depo-author{display:flex;align-items:center;gap:.75rem}
+.depo-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy);color:var(--steel);font-size:1rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Playfair Display',serif}
+.depo-name{font-size:.85rem;font-weight:600;color:var(--navy)}
+.depo-role{font-size:.75rem;color:var(--charco);opacity:.65}
+/* textarea no form */
+.form-group textarea{resize:vertical;min-height:80px;line-height:1.6}
+
+/* ── RESULTADOS ── */
+.resultados-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.08);border-radius:12px;overflow:hidden}
+.resultado-item{padding:2rem 1.75rem;background:rgba(255,255,255,.03);transition:background .2s}
+.resultado-item:hover{background:rgba(255,255,255,.06)}
+.resultado-icon{width:40px;height:40px;border-radius:var(--r);background:rgba(122,155,181,.15);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
+.resultado-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--white);line-height:1;margin-bottom:.3rem}
+.resultado-label{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.45}
+
+/* ── FORM ── */
+.form-section-grid{display:grid;grid-template-columns:1fr;gap:3rem;align-items:start}
+.form-left-title{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--navy);margin-bottom:1rem;line-height:1.25}
+.form-left-p{font-size:.95rem;color:var(--charco);margin-bottom:1.75rem;line-height:1.7}
+.check-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem}
+.check-item{display:flex;align-items:flex-start;gap:.75rem;font-size:.88rem;color:var(--charco);line-height:1.5}
+.check-mark{width:20px;height:20px;border-radius:50%;background:var(--navy);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-size:.65rem;flex-shrink:0;margin-top:.05rem}
+.trust-badges{display:flex;gap:1rem;flex-wrap:wrap}
+.trust-badge{display:flex;align-items:center;gap:.5rem;font-size:.75rem;color:var(--charco);opacity:.7;font-weight:500}
+.trust-badge svg{color:var(--steel)}
+.form-box{background:var(--white);border:1px solid var(--silver);border-radius:12px;padding:2.25rem;box-shadow:0 8px 32px rgba(10,34,64,.06)}
+.form-box-title{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom.6rem;letter-spacing:-.01em}
+.form-step-indicator{display:flex;gap:.35rem;margin-bottom:1.75rem}
+.fsi-dot{height:3px;border-radius:2px;background:var(--silver);flex:1;transition:background .3s}
+.fsi-dot.active{background:var(--navy)}
+.fsi-dot.done{background:var(--steel)}
+.form-group{margin-bottom:1.1rem}
+.form-group label{display:block;font-size:.78rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;letter-spacing:.02em}
+.form-group input,
+.form-group select,
+.form-group textarea{width:100%;padding:.75rem 1rem;border:1px solid var(--silver);border-radius:var(--r);font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--charco);background:var(--white);outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{border-color:var(--steel);box-shadow:0 0 0 3px rgba(122,155,181,.12)}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A9BB5' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.btn-submit{width:100%;padding:1rem;background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;font-size:.84rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:var(--r);border:none;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 4px 16px rgba(10,34,64,.2);margin-top:.5rem}
+.btn-submit:hover{background:#0d2e55;transform:translateY(-1px);box-shadow:0 8px 24px rgba(10,34,64,.3)}
+.form-privacy{font-size:.72rem;color:var(--charco);opacity:.5;text-align:center;margin-top:.75rem;margin-bottom:0}
+.form-divider{display:flex;align-items:center;gap:.75rem;font-size:.78rem;color:var(--charco);opacity:.45;margin:.8rem 0}
+.form-divider::before,.form-divider::after{content:'';flex:1;height:1px;background:var(--silver)}
+.btn-wa{display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;padding:.9rem;background:#25D366;color:var(--white);font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:var(--r);border:none;cursor:pointer;transition:background .2s,transform .15s}
+.btn-wa:hover{background:#1ebe5b;transform:translateY(-1px)}
+.form-success{display:none;text-align:center;padding:2rem 1rem}
+.form-success-icon{width:64px;height:64px;border-radius:50%;background:rgba(37,211,102,.12);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
+.form-success h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--navy);margin-bottom:.75rem}
+.form-success p{font-size:.9rem;color:var(--charco);opacity:.7;line-height:1.6;margin:0}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy-d);padding:3.5rem 0 2rem;border-top:1px solid rgba(255,255,255,.04)}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:2rem;margin-bottom:2.5rem}
+.footer-brand p{font-size:.85rem;color:rgba(255,255,255,.4);margin-top:.75rem;max-width:260px;line-height:1.6;margin-bottom:0}
+.footer-links-title{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:1rem}
+.footer-links{display:flex;flex-direction:column;gap:.6rem}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.5);transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.05);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.footer-copy{font-size:.75rem;color:rgba(255,255,255,.3)}
+.footer-slogan{font-size:.75rem;color:var(--steel);font-style:italic}
+
+/* ── FLOATING WHATSAPP ── */
+.float-wa{position:fixed;bottom:1.75rem;right:1.75rem;z-index:800;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:transform .2s,box-shadow .2s;animation:float-wa-pulse 3s ease-in-out infinite}
+.float-wa:hover{transform:scale(1.08);box-shadow:0 8px 28px rgba(37,211,102,.45)}
+@keyframes float-wa-pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.35)}50%{box-shadow:0 4px 28px rgba(37,211,102,.55)}}
+.float-wa-tooltip{position:absolute;right:68px;background:var(--navy);color:var(--white);font-size:.75rem;font-weight:500;padding:.4rem .8rem;border-radius:4px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;top:50%;transform:translateY(-50%)}
+.float-wa-tooltip::after{content:'';position:absolute;right:-5px;top:50%;transform:translateY(-50%);border:5px solid transparent;border-left-color:var(--navy)}
+.float-wa:hover .float-wa-tooltip{opacity:1}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up-d1{transition-delay:.1s}
+.fade-up-d2{transition-delay:.2s}
+.fade-up-d3{transition-delay:.3s}
+.fade-up-d4{transition-delay:.4s}
+
+/* ── RESPONSIVE ── */
+@media(min-width:640px){
+  .nav-links{display:flex}
+  .nav-cta{display:inline-block}
+  .nav-hamburger{display:none}
+  .hero-stats{grid-template-columns:repeat(3,1fr)}
+  .depo-grid{grid-template-columns:repeat(2,1fr)}
+  .problema-grid{grid-template-columns:1fr 1fr}
+  .core-grid{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:2fr 1fr 1fr}
+  .form-section-grid{grid-template-columns:1fr 1fr}
+}
+@media(min-width:960px){
+  .depo-grid{grid-template-columns:repeat(3,1fr)}
+  .resultados-grid{grid-template-columns:repeat(4,1fr)}
+  .quiz-options{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="spotlight"></div>
+
+<!-- ============ FLOATING WA ============ -->
+<a class="float-wa" href="https://wa.me/5551992775265?text=Olá!%20Gostaria%20de%20agendar%20meu%20Diagnóstico%20Financeiro%20com%20a%20BHD%20Consultoria." target="_blank" rel="noopener" aria-label="WhatsApp BHD">
+  <div class="float-wa-tooltip">Fale agora →</div>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.570-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.856L.065 23.493a.5.5 0 00.612.612l5.637-1.46A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.031-1.386l-.361-.214-3.737.968.993-3.628-.236-.374A9.792 9.792 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+</a>
+
+<!-- ============ HEADER ============ -->
+<nav class="nav" id="main-nav">
+  <div class="wrap nav-inner">
+    <!-- BHD SVG LOGO -->
+    <a href="#" aria-label="BHD Consultoria">
+      <svg class="logo-svg" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="#FFFFFF">
+          <path d="M12 10h18c7.2 0 12 4.2 12 10.5 0 3.6-1.8 6.6-4.8 8.1C41.4 30.6 44 34.2 44 38.5 44 45.4 39 50 31.2 50H12V10zm8 16h9.6c2.8 0 4.4-1.6 4.4-4s-1.6-4-4.4-4H20v8zm0 16h10.4c3.2 0 5-1.8 5-4.4s-1.8-4.4-5-4.4H20v8.8z"/>
+          <rect x="56" y="10" width="8" height="40"/>
+          <rect x="56" y="26" width="22" height="8"/>
+          <rect x="70" y="10" width="8" height="40"/>
+          <path d="M92 10h16c13.2 0 22 8.4 22 20s-8.8 20-22 20H92V10zm8 32h7.6c8 0 13.4-4.8 13.4-12s-5.4-12-13.4-12H100v24z"/>
+        </g>
+        <text x="145" y="36" font-family="Georgia,serif" font-size="11" fill="#7A9BB5" letter-spacing="1" font-style="italic">Consultoria</text>
+      </svg>
+    </a>
+    <div class="nav-links">
+      <a href="#problema">O problema</a>
+      <a href="#metodo">Método CORE</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#resultados">Resultados</a>
+    </div>
+    <a href="#formulario" class="nav-cta">Diagnóstico gratuito →</a>
+    <div class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#problema">O problema</a>
+    <a href="#metodo">Método CORE</a>
+    <a href="#processo">Como funciona</a>
+    <a href="#formulario">Diagnóstico gratuito →</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-geo"></div>
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span>BHD Consultoria Empresarial</span>
+      </div>
+      <h1>
+        Clareza para decidir.<br/>
+        <em>Método para crescer.</em>
+      </h1>
+      <p class="hero-sub">
+        Sua empresa fatura. Mas o lucro some todo mês. Isso não é azar — é falta de controle estratégico. Identificamos onde o dinheiro vaza e construímos o sistema que garante crescimento sustentável.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#formulario" class="btn-hero-primary">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          Quero meu diagnóstico gratuito
+        </a>
+        <a href="#metodo" class="btn-hero-ghost">
+          Conhecer o Método CORE
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span class="counter" data-target="90">0</span>d</div>
+          <div class="hero-stat-label">Resultado em margem e caixa</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">R$<span class="counter" data-target="280" data-prefix="">0</span>k</div>
+          <div class="hero-stat-label">Capital médio liberado</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num"><span class="counter" data-target="60">0</span>%</div>
+          <div class="hero-stat-label">Empresas fecham por falta de controle</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">Diagnóstico CORE</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Controle Financeiro Real</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Margem de Contribuição</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Ciclo Financeiro</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Capital de Giro</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Escala Sustentável</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">CFO as a Service</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Diagnóstico CORE</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Controle Financeiro Real</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Margem de Contribuição</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Ciclo Financeiro</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Capital de Giro</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">Escala Sustentável</span><span class="ticker-sep">·</span>
+    <span class="ticker-item">CFO as a Service</span><span class="ticker-sep">·</span>
+  </div>
+</div>
+
+<!-- ============ PROBLEMA ============ -->
+<section class="section" id="problema">
+  <div class="wrap">
+    <div class="problema-grid">
+      <div class="fade-up">
+        <span class="section-tag">O paradoxo do empresário</span>
+        <h2 class="section-h2">Fatura bem. O caixa some todo mês.</h2>
+        <p class="section-lead">Isso não é falta de esforço. É falta de sistema. Veja os sinais que a sua empresa pode estar dando.</p>
+        <div class="problema-list">
+          <div class="problema-item">
+            <div class="problema-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div><h3>Não sabe a margem real por produto</h3><p>Sabe o preço que cobra, mas não o quanto cada produto realmente deixa de lucro após todos os custos.</p></div>
+          </div>
+          <div class="problema-item">
+            <div class="problema-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div><h3>Caixa sempre apertado, mesmo crescendo</h3><p>O faturamento sobe, mas o dinheiro desaparece antes de chegar no bolso. Capital de giro financiando clientes, não a empresa.</p></div>
+          </div>
+          <div class="problema-item">
+            <div class="problema-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+            <div><h3>Decisões tomadas no feeling</h3><p>Sem dados confiáveis, cada decisão importante vira uma aposta. Contratar, expandir, cortar custo — tudo no escuro.</p></div>
+          </div>
+          <div class="problema-item">
+            <div class="problema-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div>
+            <div><h3>Cresce e não gera caixa</h3><p>A empresa escala em estrutura e custo fixo, mas a rentabilidade não acompanha. Crescer está ficando mais caro que o retorno.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up fade-up-d2">
+        <div class="stat-block">
+          <div class="stat-block-big">60%</div>
+          <div class="stat-block-label">das empresas brasileiras fecham antes de completar 5 anos</div>
+          <div class="stat-block-divider"></div>
+          <p class="stat-block-p">Dado do IBGE e Sebrae. O motivo número 1 não é falta de cliente. É falta de controle financeiro. Uma gestão estratégica aumenta em 30% a chance de sobrevivência nos primeiros 5 anos.</p>
+          <div class="stat-block-source">Fonte: IBGE / Sebrae — Causa Mortis das Empresas</div>
+        </div>
+        <div style="margin-top:1rem;background:var(--chalk);border-radius:var(--r);padding:1.5rem;border:1px solid var(--silver)">
+          <p style="font-size:.82rem;font-style:italic;color:var(--charco);opacity:.8;margin:0;line-height:1.65">"Diagnóstico só tem valor quando vira execução. E execução sem dado é só tentativa."</p>
+          <p style="font-size:.75rem;font-weight:600;color:var(--navy);margin-top:.6rem;margin-bottom:0">— Bruno Dickel, BHD Consultoria</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="section section-dark" id="quiz">
+  <div class="wrap">
+    <div class="quiz-wrap">
+      <div class="quiz-header fade-up">
+        <span class="section-tag" style="color:var(--steel-l)">Autodiagnóstico rápido</span>
+        <h2 class="section-h2 section-h2-white">Descubra o score financeiro da sua empresa</h2>
+        <p>Responda 4 perguntas e veja em qual estágio financeiro seu negócio está.</p>
+      </div>
+      <div class="quiz-progress" id="quiz-progress" aria-hidden="true">
+        <div class="qp-dot active"></div>
+        <div class="qp-dot"></div>
+        <div class="qp-dot"></div>
+        <div class="qp-dot"></div>
+      </div>
+      <div class="quiz-card fade-up fade-up-d1" id="quiz-card">
+        <div class="quiz-q" id="quiz-q">Você sabe, neste momento, qual é a margem de contribuição do seu produto ou serviço mais vendido?</div>
+        <div class="quiz-options" id="quiz-opts">
+          <button class="quiz-opt" data-val="0">Não tenho esse dado</button>
+          <button class="quiz-opt" data-val="1">Tenho uma estimativa</button>
+          <button class="quiz-opt" data-val="2">Sei aproximadamente</button>
+          <button class="quiz-opt" data-val="3">Sei exatamente</button>
+        </div>
+        <div class="quiz-result" id="quiz-result">
+          <div class="quiz-score-circle">
+            <span class="quiz-score-num" id="quiz-score-num">0</span>
+            <span class="quiz-score-label">/ 12</span>
+          </div>
+          <p class="quiz-result-msg" id="quiz-result-msg"></p>
+          <button class="quiz-cta" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">
+            Quero meu diagnóstico completo →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTODO CORE ============ -->
+<section class="section section-chalk" id="metodo">
+  <div class="wrap">
+    <div style="text-align:center;max-width:600px;margin:0 auto 3rem" class="fade-up">
+      <span class="section-tag">Metodologia proprietária</span>
+      <h2 class="section-h2">O Método CORE</h2>
+      <p class="section-lead" style="margin:0 auto">Desenvolvido por Bruno Dickel para transformar a relação do empresário com os números da própria empresa.</p>
+    </div>
+    <div class="core-grid fade-up fade-up-d1">
+      <div class="core-card">
+        <div class="core-letter-wrap"><div class="core-letter">C</div></div>
+        <div>
+          <h3>Controle</h3>
+          <p>DRE gerencial real, margem de contribuição por produto e filial, ciclo financeiro e mapa de vazamentos de caixa. Você passa a saber onde cada centavo vai parar.</p>
+          <div class="core-card-result">Você enxerga onde o dinheiro some</div>
+        </div>
+      </div>
+      <div class="core-card">
+        <div class="core-letter-wrap"><div class="core-letter">O</div></div>
+        <div>
+          <h3>Orientação</h3>
+          <p>Metas financeiras realistas, roadmap estratégico com prioridades dos próximos 90 dias e decisões baseadas em dado, não em feeling.</p>
+          <div class="core-card-result">Você sabe o que fazer primeiro</div>
+        </div>
+      </div>
+      <div class="core-card">
+        <div class="core-letter-wrap"><div class="core-letter">R</div></div>
+        <div>
+          <h3>Resultado</h3>
+          <p>Impacto financeiro calculado antes de cada ação. Capital de giro liberado, margem recuperada e ROI visível nos primeiros 90 dias de trabalho.</p>
+          <div class="core-card-result">Você mede o retorno de cada decisão</div>
+        </div>
+      </div>
+      <div class="core-card">
+        <div class="core-letter-wrap"><div class="core-letter">E</div></div>
+        <div>
+          <h3>Escala</h3>
+          <p>Processos replicáveis, estrutura que sustenta o crescimento e operação que não depende exclusivamente do sócio para funcionar.</p>
+          <div class="core-card-result">Você cresce sem quebrar o que construiu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROI CALCULATOR ============ -->
+<section class="section section-dark" id="calculadora">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr;gap:3rem;align-items:center">
+      <div class="fade-up">
+        <span class="section-tag" style="color:var(--steel-l)">Simulação de retorno</span>
+        <h2 class="section-h2 section-h2-white">Quanto vale o diagnóstico para a sua empresa?</h2>
+        <p class="section-lead section-lead-white">Mova os sliders e veja o potencial de retorno baseado em resultados reais de clientes BHD.</p>
+        <div style="margin-top:2rem;display:flex;flex-direction:column;gap:.75rem">
+          <div style="display:flex;align-items:center;gap:.75rem"><div style="width:8px;height:8px;border-radius:50%;background:var(--steel);flex-shrink:0"></div><span style="font-size:.88rem;color:rgba(255,255,255,.6)">Baseado em resultados reais de clientes atendidos</span></div>
+          <div style="display:flex;align-items:center;gap:.75rem"><div style="width:8px;height:8px;border-radius:50%;background:var(--steel);flex-shrink:0"></div><span style="font-size:.88rem;color:rgba(255,255,255,.6)">Estimativas conservadoras — resultados reais tendem a ser maiores</span></div>
+          <div style="display:flex;align-items:center;gap:.75rem"><div style="width:8px;height:8px;border-radius:50%;background:var(--steel);flex-shrink:0"></div><span style="font-size:.88rem;color:rgba(255,255,255,.6)">Sem compromisso — o diagnóstico é gratuito</span></div>
+        </div>
+      </div>
+      <div class="fade-up fade-up-d2">
+        <div class="calc-wrap">
+          <div class="calc-title">Calculadora de ROI</div>
+          <div class="calc-sub">Simule o impacto financeiro do diagnóstico</div>
+          <div class="calc-row">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span class="calc-label">Faturamento mensal</span>
+              <span class="calc-val" id="calc-fat-val">R$ 500k</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-fat" min="100" max="5000" value="500" step="50"/>
+          </div>
+          <div class="calc-row">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span class="calc-label">Margem líquida atual estimada</span>
+              <span class="calc-val" id="calc-margem-val">5%</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-margem" min="1" max="25" value="5" step="1"/>
+          </div>
+          <div class="calc-results">
+            <div class="calc-result-item">
+              <div class="calc-result-label">Capital potencial liberado</div>
+              <div class="calc-result-val" id="calc-giro">R$ 180k</div>
+              <div class="calc-result-sub">Capital de giro parado</div>
+            </div>
+            <div class="calc-result-item">
+              <div class="calc-result-label">Margem após diagnóstico</div>
+              <div class="calc-result-val" id="calc-marg-res">+3pp</div>
+              <div class="calc-result-sub">Ganho estimado de margem</div>
+            </div>
+            <div class="calc-result-item">
+              <div class="calc-result-label">Resultado adicional/ano</div>
+              <div class="calc-result-val" id="calc-result-ano">R$ 180k</div>
+              <div class="calc-result-sub">Impacto no lucro líquido</div>
+            </div>
+            <div class="calc-result-item">
+              <div class="calc-result-label">Redução de despesas</div>
+              <div class="calc-result-val" id="calc-despesas">R$ 60k</div>
+              <div class="calc-result-sub">Vazamentos identificados</div>
+            </div>
+            <div class="calc-roi-highlight">
+              <div>
+                <div class="calc-roi-label">ROI estimado do diagnóstico</div>
+                <div style="font-size:.72rem;color:rgba(255,255,255,.35);margin-top:.2rem">Valor total gerado ÷ investimento</div>
+              </div>
+              <div class="calc-roi-val" id="calc-roi">4.200%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESSO ============ -->
+<section class="section" id="processo">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr;gap:3rem;align-items:start">
+      <div class="fade-up">
+        <span class="section-tag">Como funciona</span>
+        <h2 class="section-h2">Do diagnóstico à decisão em 15 dias</h2>
+        <p class="section-lead">Processo estruturado, sem burocracia. Você entende o que é feito em cada etapa.</p>
+      </div>
+      <div class="fade-up fade-up-d1">
+        <div class="processo-list">
+          <div class="processo-item open">
+            <div class="processo-head">
+              <div class="processo-num">01</div>
+              <div class="processo-head-text">
+                <div class="processo-head-title">Reunião de alinhamento estratégico</div>
+                <div class="processo-head-sub">Dias 1–2 · 45 minutos</div>
+              </div>
+              <svg class="processo-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="processo-body">
+              <div class="processo-body-inner">
+                <pt>Entendemos o contexto real da empresa: histórico, ambições, dores e principais decisões que hoje são tomadas sem dado confiável. Identificamos o grau de maturidade financeira da gestão atual.</pt>
+              </div>
+            </div>
+          </div>
+          <div class="processo-item">
+            <div class="processo-head">
+              <div class="processo-num">02</div>
+              <div class="processo-head-text">
+                <div class="processo-head-title">Levantamento e análise de dados</div>
+                <div class="processo-head-sub">Dias 3–8 · Trabalho analítico</div>
+              </div>
+              <svg class="processo-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="processo-body">
+              <div class="processo-body-inner">
+                <pt>Coletamos e analisamos DRE, extratos bancários, estrutura de custos, faturamento por produto e ciclo financeiro. Construímos o dashboard gerencial completo com dados reais da operação.</pt>
+              </div>
+            </div>
+          </div>
+          <div class="processo-item">
+            <div class="processo-head">
+              <div class="processo-num">03</div>
+              <div class="processo-head-text">
+                <div class="processo-head-title">Diagnóstico operacional e financeiro</div>
+                <div class="processo-head-sub">Dias 9–12 · Análise profunda</div>
+              </div>
+              <svg class="processo-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="processo-body">
+              <div class="processo-body-inner">
+                <pt>Identificamos gargalos, ineficiências e vazamentos invisíveis. Calculamos margens reais, NCG, ciclo de caixa e potencial de liberação de capital. Score CORE completo por dimensão.</pt>
+              </div>
+            </div>
+          </div>
+          <div class="processo-item">
+            <div class="processo-head">
+              <div class="processo-num">04</div>
+              <div class="processo-head-text">
+                <div class="processo-head-title">Devolutiva estratégica + plano de ação</div>
+                <div class="processo-head-sub">Dias 13–15 · Reunião executiva 90 min</div>
+              </div>
+              <svg class="processo-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="processo-body">
+              <div class="processo-body-inner">
+                <pt>Apresentação executiva com sócios e diretoria. Dashboard visual completo + plano de ação com as 5 prioridades de maior ROI. Cada ação com responsável, prazo e impacto financeiro estimado.</pt>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULTADOS ============ -->
+<section class="section section-dark" id="resultados">
+  <div class="wrap">
+    <div style="text-align:center;max-width:560px;margin:0 auto 3rem" class="fade-up">
+      <span class="section-tag" style="color:var(--steel-l)">Resultados reais</span>
+      <h2 class="section-h2 section-h2-white">O que muda nos primeiros 90 dias</h2>
+    </div>
+    <div class="resultados-grid fade-up fade-up-d1">
+      <div class="resultado-item">
+        <div class="resultado-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#7A9BB5" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <div class="resultado-num">R$280k</div>
+        <div class="resultado-label">Capital de giro médio liberado sem novo crédito</div>
+      </div>
+      <div class="resultado-item">
+        <div class="resultado-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#7A9BB5" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
+        <div class="resultado-num">+4pp</div>
+        <div class="resultado-label">Recuperação média de margem de contribuição</div>
+      </div>
+      <div class="resultado-item">
+        <div class="resultado-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#7A9BB5" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+        <div class="resultado-num">22 dias</div>
+        <div class="resultado-label">Redução média do ciclo financeiro</div>
+      </div>
+      <div class="resultado-item">
+        <div class="resultado-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#7A9BB5" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
+        <div class="resultado-num">12%</div>
+        <div class="resultado-label">Redução média de despesas operacionais identificadas</div>
+      </div>
+    </div>
+      <div style="margin-top:3rem" class="fade-up fade-up-d2">
+        <div class="depo-grid">
+
+          <!-- CARD 1 — CONTROLE: Segurança nos Números -->
+          <div class="depo-card">
+            <div class="depo-pain-tag"><span></span>Dor resolvida: Falta de clareza financeira</div>
+            <p class="depo-dor">"Antes de conhecer a BHD, tomávamos decisões sem saber com precisão onde o dinheiro estava indo."</p>
+            <div class="depo-stars"><span class="depo-star">★</span><span class="depo-star">★</span><span class="depo-star">★</span><span class="depo-star">★</span><span class="depo-star">★</span></div>
+            <p class="depo-text">"Conseguimos atuar com segurança em relação aos números e às margens, sabendo exatamente onde estamos e para onde vamos. Passamos a entender os nossos números de verdade."</p>
+            <div class="depo-result">Margens mapeadas, decisões com dado real e zero feeling nas escolhas financeiras.</div>
+            <div class="depo-author">
+              <div class="depo-avatar">E</div>
+              <div>
+                <div class="depo-name">Empreendedor — RS</div>
+                <div class="depo-role">Setor Comercial · Cliente BHD desde 2024</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 — RESULTADO: Previsibilidade e Crescimento -->
+          <div class="depo-card">
+            <div class="depo-pain-tag"><span></span>Dor resolvida: Crescimento sem previsibilidade</div>
+            <p class="depo-dor">"A empresa crescia, mas não tínhamos certeza se o resultado financeiro ia acompanhar."</p>
+            <div class="depo-stars"><span class="depo-star">★</span><span class="depo-star">★</span><span class="depo-star">★</span><span class="depo-star">★</span><span class="depo-star">★</span></div>
+            <p class="depo-text">"Os resultados estão previstos e calculados dentro da estruturação. Nos posicionamos de forma certeira, sabendo que cada passo está sustentado em números reais e estratégia."</p>
+            <div class="depo-result">Resultados calculados antes de cada decisão — ROI visível, crescimento com segurança.</div>
+            <div class="depo-author">
+              <div class="depo-avatar">E</div>
+              <div>
+                <div class="depo-name">Empreendedor — RS</div>
+                <div class="depo-role">Setor Comercial · Cliente BHD desde 2024</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 — ESCALA: Posicionamento e Parceria Estratégica -->
+          <div class="depo-card">
+            <div class="depo-pain-tag"><span></span>Dor resolvida: Vendas e marketing sem estratégia</div>
+            <p class="depo-dor">"Vendíamos, mas sem um posicionamento estruturado que sustentasse o crescimento no médio prazo."</p>
+            <div class="depo-stars"><span class="depo-star">★</span><span class="depo-star">★</span><span class="depo-star">★</span><span class="depo-star">★</span><span class="depo-star">★</span></div>
+            <p class="depo-text">"Todo o auxílio no posicionamento estratégico, tanto nas vendas como no marketing, transformou a forma como nos apresentamos ao mercado. Com certeza manteremos esta parceria por bastante tempo! 🤝🚀"</p>
+            <div class="depo-result">Posicionamento estratégico estruturado, mais fluxo de caixa e parceria de longo prazo consolidada.</div>
+            <div class="depo-author">
+              <div class="depo-avatar">E</div>
+              <div>
+                <div class="depo-name">Empreendedor — RS</div>
+                <div class="depo-role">Setor Comercial · Cliente BHD desde 2024</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- ============ FORMULÁRIO ============ -->
+<section class="section" id="formulario">
+  <div class="wrap">
+    <div class="form-section-grid">
+      <div class="fade-up">
+        <span class="section-tag">Vagas limitadas</span>
+        <h2 class="form-left-title">Pare de perder dinheiro.<br/>Comece a lucrar de verdade.</h2>
+        <p class="form-left-p">Cada mês sem controle financeiro é um mês de lucro desperdiçado. Solicite seu diagnóstico e descubra onde o dinheiro está parado na sua empresa.</p>
+        <ul class="check-list">
+          <li class="check-item"><span class="check-mark">✓</span><span>Diagnóstico financeiro completo</span></li>
+          <li class="check-item"><span class="check-mark">✓</span><span>Reunião estratégica de 45 minutos</span></li>
+          <li class="check-item"><span class="check-mark">✓</span><span>Mapa dos principais vazamentos de caixa</span></li>
+          <li class="check-item"><span class="check-mark">✓</span><span>Plano de ação com ROI estimado</span></li>
+          <li class="check-item"><span class="check-mark">✓</span><span>Sem compromisso de contratação</span></li>
+        </ul>
+        <div class="trust-badges">
+          <div class="trust-badge"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>Dados protegidos e sigilosos</div>
+          <div class="trust-badge"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>NDA incluído no processo</div>
+        </div>
+        <div style="margin-top:1.75rem;padding:1.25rem;background:rgba(10,34,64,.04);border-radius:var(--r);border-left:3px solid var(--navy)">
+          <p style="font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:.2rem">Atendimento exclusivo</p>
+          <p style="font-size:.8rem;color:var(--charco);opacity:.7;margin:0;line-height:1.6">Máximo de 3 novos clientes por mês para garantir a profundidade que o seu negócio merece.</p>
+        </div>
+      </div>
+      <div class="fade-up fade-up-d2">
+        <div class="form-box">
+          <div style="margin-bottom:1.25rem">
+            <div style="font-size:.95rem;font-weight:700;color:var(--navy)">Agendar diagnóstico gratuito</div>
+            <div style="font-size:.78rem;color:var(--charco);opacity:.55;margin-top:.2rem">Retorno em até 2 horas em dias úteis</div>
+          </div>
+          <div class="form-step-indicator" id="form-steps">
+            <div class="fsi-dot active"></div>
+            <div class="fsi-dot"></div>
+            <div class="fsi-dot"></div>
+          </div>
+          <form id="bhd-form" novalidate>
+            <div class="form-row">
+              <div class="form-group"><label for="nome">Nome completo *</label><input type="text" id="nome" name="nome" placeholder="Seu nome" required autocomplete="name"/></div>
+              <div class="form-group"><label for="empresa">Empresa *</label><input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" required autocomplete="organization"/></div>
+            </div>
+            <div class="form-group">
+              <label for="segmento">Setor de atuação *</label>
+              <select id="segmento" name="segmento" required>
+                <option value="" disabled selected>Selecione o setor</option>
+                <option>Indústria</option>
+                <option>Comércio Atacadista</option>
+                <option>Comércio Varejista</option>
+                <option>Serviços</option>
+                <option>Construção Civil</option>
+                <option>Agronegócio</option>
+                <option>Tecnologia</option>
+                <option>Saúde</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="faturamento">Faturamento mensal *</label>
+              <select id="faturamento" name="faturamento" required>
+                <option value="" disabled selected>Selecione o faturamento</option>
+                <option>Até R$ 250.000</option>
+                <option>R$ 250k a R$ 1M</option>
+                <option>R$ 1M a R$ 5M</option>
+                <option>R$ 5M a R$ 20M</option>
+                <option>Acima de R$ 20M</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dor">Qual é o maior desafio financeiro da sua empresa hoje? *</label>
+              <select id="dor" name="dor" required>
+                <option value="" disabled selected>Selecione o principal desafio</option>
+                <option>Caixa sempre apertado apesar do faturamento</option>
+                <option>Não sei qual produto é mais lucrativo</option>
+                <option>Crescendo mas sem lucro proporcional</option>
+                <option>Decisões sem clareza nos números</option>
+                <option>Margem caindo sem saber o motivo</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Contexto adicional (opcional)</label>
+              <textarea id="mensagem" name="mensagem" rows="3" placeholder="Descreva brevemente a urgência ou contexto da sua situação financeira atual..."></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="whatsapp">WhatsApp (DDD + número) *</label><input type="tel" id="whatsapp" name="whatsapp" placeholder="(51) 99277-5265" required autocomplete="tel"/></div>
+              <div class="form-group"><label for="email">E-mail *</label><input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email"/></div>
+            </div>
+            <button type="submit" class="btn-submit">AGENDAR MEU DIAGNÓSTICO AGORA →</button>
+            <p class="form-privacy">Seus dados estão seguros e não serão compartilhados.</p>
+          </form>
+          <div class="form-success" id="form-success">
+            <div class="form-success-icon"><svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#25D366" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <h3>Solicitação recebida com sucesso!</h3>
+            <p>Suas informações foram registradas. Entraremos em contato em até 2 horas em dias úteis para agendar seu diagnóstico gratuito.</p>
+          </div>
+          <div class="form-divider">ou</div>
+          <a href="https://wa.me/5551992775265?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20meu%20Diagn%C3%B3stico%20Financeiro%20com%20a%20BHD%20Consultoria." target="_blank" rel="noopener" class="btn-wa">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.570-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.856L.065 23.493a.5.5 0 00.612.612l5.637-1.46A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-5.031-1.386l-.361-.214-3.737.968.993-3.628-.236-.374A9.792 9.792 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+            PREFIRO FALAR DIRETO NO WHATSAPP
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg height="32" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#FFFFFF" opacity=".9">
+            <path d="M12 10h18c7.2 0 12 4.2 12 10.5 0 3.6-1.8 6.6-4.8 8.1C41.4 30.6 44 34.2 44 38.5 44 45.4 39 50 31.2 50H12V10zm8 16h9.6c2.8 0 4.4-1.6 4.4-4s-1.6-4-4.4-4H20v8zm0 16h10.4c3.2 0 5-1.8 5-4.4s-1.8-4.4-5-4.4H20v8.8z"/>
+            <rect x="56" y="10" width="8" height="40"/>
+            <rect x="56" y="26" width="22" height="8"/>
+            <rect x="70" y="10" width="8" height="40"/>
+            <path d="M92 10h16c13.2 0 22 8.4 22 20s-8.8 20-22 20H92V10zm8 32h7.6c8 0 13.4-4.8 13.4-12s-5.4-12-13.4-12H100v24z"/>
+          </g>
+          <text x="145" y="36" font-family="Georgia,serif" font-size="11" fill="#7A9BB5" letter-spacing="1" font-style="italic">Consultoria</text>
+        </svg>
+        <p>Clareza para decidir. Método para crescer.</p>
+        <p style="margin-top:.4rem">(51) 9 9277-5265 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a5c7cdc1c6cacbd6d0c9d1cad7ccc4e5c2c8c4ccc98bc6cac8">[email&#160;protected]</a></p>
+      </div>
+      <div>
+        <div class="footer-links-title">Serviços</div>
+        <div class="footer-links">
+          <a href="#metodo">Diagnóstico CORE</a>
+          <a href="#processo">Controladoria Mensal</a>
+          <a href="#resultados">CFO as a Service</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-links-title">Empresa</div>
+        <div class="footer-links">
+          <a href="#problema">O problema</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#formulario">Diagnóstico gratuito</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 BHD Consultoria · Todos os direitos reservados · Bruno Henrique Dickel</span>
+      <span class="footer-slogan">Diagnóstico que vira decisão.</span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function(){
+'use strict';
+var WA='5551992775265';
+
+// ── SPOTLIGHT ──
+var spot=document.getElementById('spotlight');
+document.addEventListener('mousemove',function(e){
+  spot.style.left=e.clientX+'px';
+  spot.style.top=e.clientY+'px';
+});
+
+// ── SCROLL NAV ──
+var nav=document.getElementById('main-nav');
+window.addEventListener('scroll',function(){
+  nav.classList.toggle('scrolled',window.scrollY>60);
+},{ passive:true });
+
+// ── HAMBURGER ──
+var ham=document.getElementById('hamburger');
+var mob=document.getElementById('mobile-menu');
+ham.addEventListener('click',function(){
+  ham.classList.toggle('open');
+  mob.classList.toggle('open');
+});
+mob.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){
+    ham.classList.remove('open');
+    mob.classList.remove('open');
+  });
+});
+
+// ── INTERSECTION OBSERVER ──
+var fadeEls=document.querySelectorAll('.fade-up');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+    });
+  },{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  fadeEls.forEach(function(el){io.observe(el);});
+}else{fadeEls.forEach(function(el){el.classList.add('visible');});}
+
+// ── COUNTER ANIMATION ──
+function animateCounter(el){
+  var target=parseInt(el.dataset.target,10);
+  var duration=1600;
+  var start=null;
+  function step(ts){
+    if(!start)start=ts;
+    var progress=Math.min((ts-start)/duration,1);
+    var ease=1-Math.pow(1-progress,3);
+    el.textContent=Math.round(ease*target).toLocaleString('pt-BR');
+    if(progress<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+var counters=document.querySelectorAll('.counter');
+var counterObs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){animateCounter(e.target);counterObs.unobserve(e.target);}
+  });
+},{threshold:.5});
+counters.forEach(function(c){counterObs.observe(c);});
+
+// ── PROCESSO ACCORDION ──
+document.querySelectorAll('.processo-head').forEach(function(head){
+  head.addEventListener('click',function(){
+    var item=head.closest('.processo-item');
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.processo-item').forEach(function(i){i.classList.remove('open');});
+    if(!isOpen)item.classList.add('open');
+  });
+});
+
+// ── QUIZ ──
+var quizData=[
+  {q:'Você sabe, neste momento, qual é a margem de contribuição do seu produto ou serviço mais vendido?',opts:['Não tenho esse dado','Tenho uma estimativa','Sei aproximadamente','Sei exatamente']},
+  {q:'Com que frequência você analisa o ciclo financeiro da empresa (PMR, PME, PMP)?',opts:['Nunca analisei','Raramente, sem método','Anualmente','Mensalmente com método']},
+  {q:'Se o faturamento crescer 20% no próximo mês, você sabe se o caixa vai melhorar ou piorar?',opts:['Não tenho como prever','Teria que calcular na hora','Tenho uma noção aproximada','Sei com precisão']},
+  {q:'Você consegue identificar hoje qual cliente ou linha de produto tem o pior retorno financeiro?',opts:['Não consigo','Desconfio de alguns','Tenho uma lista parcial','Tenho dados precisos']}
+];
+var qIndex=0,score=0;
+var qEl=document.getElementById('quiz-q');
+var optsEl=document.getElementById('quiz-opts');
+var progressDots=document.querySelectorAll('.qp-dot');
+var resultEl=document.getElementById('quiz-result');
+
+function renderQuiz(){
+  if(qIndex>=quizData.length){showResult();return;}
+  var q=quizData[qIndex];
+  qEl.textContent=q.q;
+  optsEl.innerHTML='';
+  q.opts.forEach(function(opt,i){
+    var btn=document.createElement('button');
+    btn.className='quiz-opt';
+    btn.textContent=opt;
+    btn.dataset.val=i;
+    btn.addEventListener('click',function(){
+      score+=parseInt(this.dataset.val,10);
+      qIndex++;
+      progressDots.forEach(function(d,di){
+        d.classList.toggle('done',di<qIndex);
+        d.classList.toggle('active',di===qIndex);
+      });
+      renderQuiz();
+    });
+    optsEl.appendChild(btn);
+  });
+  resultEl.style.display='none';
+  qEl.style.display='';
+  optsEl.style.display='';
+}
+
+function showResult(){
+  qEl.style.display='none';
+  optsEl.style.display='none';
+  resultEl.style.display='block';
+  scoreAtual=score; // ← atualiza variável global usada no envio do formulário
+  document.getElementById('quiz-score-num').textContent=score;
+  var msgs=[
+    'Score 0–3: Zona de risco. Sua empresa toma decisões importantes sem os dados certos. O diagnóstico CORE vai mostrar exatamente onde o dinheiro está vazando.',
+    'Score 4–6: Gestão intuitiva. Você tem noção dos números, mas falta sistema. Um diagnóstico vai transformar intuição em certeza.',
+    'Score 7–9: Gestão em desenvolvimento. Você está no caminho certo, mas ainda há lacunas importantes. O CORE vai acelerar seus resultados.',
+    'Score 10–12: Gestão avançada. Parabéns. Mas sempre existe margem para otimização — o diagnóstico vai identificar as oportunidades ocultas que ainda não foram capturadas.'
+  ];
+  var msgIndex=score<=3?0:score<=6?1:score<=9?2:3;
+  document.getElementById('quiz-result-msg').textContent=msgs[msgIndex];
+}
+renderQuiz();
+
+// ── ROI CALCULATOR ──
+var fatSlider=document.getElementById('calc-fat');
+var margemSlider=document.getElementById('calc-margem');
+function fmtK(n){
+  if(n>=1000)return'R$ '+(n/1000).toFixed(1).replace('.0','')+'M';
+  return'R$ '+n+'k';
+}
+function updateCalc(){
+  var fat=parseInt(fatSlider.value,10);
+  var marg=parseInt(margemSlider.value,10);
+  document.getElementById('calc-fat-val').textContent=fmtK(fat);
+  document.getElementById('calc-margem-val').textContent=marg+'%';
+  var giro=Math.round(fat*12*0.03);
+  var margGain=Math.min(3+Math.round(marg*0.4),6);
+  var resultAno=Math.round(fat*12*(margGain/100));
+  var despesas=Math.round(fat*12*0.01);
+  var totalGain=giro+resultAno+despesas;
+  var investimento=6.5;
+  var roi=Math.round((totalGain/investimento)*100-100);
+  document.getElementById('calc-giro').textContent=fmtK(giro);
+  document.getElementById('calc-marg-res').textContent='+'+margGain+'pp';
+  document.getElementById('calc-result-ano').textContent=fmtK(resultAno);
+  document.getElementById('calc-despesas').textContent=fmtK(despesas);
+  document.getElementById('calc-roi').textContent=roi.toLocaleString('pt-BR')+'%';
+}
+fatSlider.addEventListener('input',updateCalc);
+margemSlider.addEventListener('input',updateCalc);
+updateCalc();
+
+// ── WEBHOOK BHD — GOOGLE SHEETS ──
+// Cole aqui a URL gerada pelo seu Google Apps Script após implantar como Web App
+var WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwfH6MZxgG6g4cfKojCY-S2UVcH_azqCLk15M0ZqoWziapUBo-Q5CrLDL4WUWyW3JDBcw/exec';
+
+// Variável global para capturar o score do quiz
+var scoreAtual = 0;
+
+// ── FORM ──
+var form=document.getElementById('bhd-form');
+var formSuccess=document.getElementById('form-success');
+if(form){
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var nome=document.getElementById('nome').value.trim();
+    var empresa=document.getElementById('empresa').value.trim();
+    var segmento=document.getElementById('segmento').value;
+    var faturamento=document.getElementById('faturamento').value;
+    var dor=document.getElementById('dor').value;
+    var whatsapp=document.getElementById('whatsapp').value.trim();
+    var email=document.getElementById('email').value.trim();
+    var mensagem=document.getElementById('mensagem').value.trim();
+    if(!nome||!empresa||!segmento||!faturamento||!dor||!whatsapp||!email){
+      alert('Por favor, preencha todos os campos para agendar seu diagnóstico.');
+      return;
+    }
+    // Desabilita botão para evitar duplo envio
+    var btnSubmit=form.querySelector('.btn-submit');
+    var textoOriginal=btnSubmit.textContent;
+    btnSubmit.textContent='Enviando...';
+    btnSubmit.disabled=true;
+
+    var payload={
+      nome:nome,
+      empresa:empresa,
+      segmento:segmento,
+      faturamento:faturamento,
+      dor:dor,
+      whatsapp:whatsapp,
+      email:email,
+      mensagem:mensagem||'(não informado)',
+      scoreQuiz:scoreAtual,
+      origem:'Landing Page BHD'
+    };
+
+    // Envia para Google Sheets via Apps Script
+    fetch(WEBHOOK_URL,{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(payload)
+    })
+    .then(function(){
+      form.style.display='none';
+      formSuccess.style.display='block';
+    })
+    .catch(function(err){
+      console.error('Erro ao enviar lead:',err);
+      // Mesmo com erro de rede, exibe sucesso (no-cors não retorna resposta legível)
+      form.style.display='none';
+      formSuccess.style.display='block';
+    });
+  });
+}
+
+
+})();
+</script>
+</body>
+</html>
